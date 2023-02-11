@@ -106,6 +106,7 @@ public class Receipt {
 
     public void setNotes(Notes notes) {
         this.notes = notes;
+        notes.setReceipt(this);
     }
 
     public Byte[] getImage() {
@@ -124,8 +125,10 @@ public class Receipt {
         this.ingredients = ingredients;
     }
 
-    public void addIngredient(Ingredient ingredient) {
-        ingredients.add(ingredient);
+    public Receipt addIngredient(Ingredient ingredient) {
+        ingredient.setReceipt(this);
+        this.ingredients.add(ingredient);
+        return this;
     }
 
     public Difficulty getDifficulty() {

@@ -125,17 +125,16 @@ class ReceiptBootstrap implements ApplicationListener<ContextRefreshedEvent> {
                 "Read more: http://www.simplyReceipts.com/Receipts/perfect_guacamole/#ixzz4jvoun5ws");
 
         guacReceipt.setNotes(guacNotes);
-        guacNotes.setReceipt(guacReceipt);
 
         //very redundent - could add helper method, and make this simpler
-        guacReceipt.addIngredient(new Ingredient("ripe avocados", new BigDecimal(2), eachUom, guacReceipt));
-        guacReceipt.addIngredient(new Ingredient("Kosher salt", new BigDecimal(".5"), teapoonUom, guacReceipt));
-        guacReceipt.addIngredient(new Ingredient("fresh lime juice or lemon juice", new BigDecimal(2), tableSpoonUom, guacReceipt));
-        guacReceipt.addIngredient(new Ingredient("minced red onion or thinly sliced green onion", new BigDecimal(2), tableSpoonUom, guacReceipt));
-        guacReceipt.addIngredient(new Ingredient("serrano chiles, stems and seeds removed, minced", new BigDecimal(2), eachUom, guacReceipt));
-        guacReceipt.addIngredient(new Ingredient("Cilantro", new BigDecimal(2), tableSpoonUom, guacReceipt));
-        guacReceipt.addIngredient(new Ingredient("freshly grated black pepper", new BigDecimal(2), dashUom, guacReceipt));
-        guacReceipt.addIngredient(new Ingredient("ripe tomato, seeds and pulp removed, chopped", new BigDecimal(".5"), eachUom, guacReceipt));
+        guacReceipt.addIngredient(new Ingredient("ripe avocados", new BigDecimal(2), eachUom));
+        guacReceipt.addIngredient(new Ingredient("Kosher salt", new BigDecimal(".5"), teapoonUom));
+        guacReceipt.addIngredient(new Ingredient("fresh lime juice or lemon juice", new BigDecimal(2), tableSpoonUom));
+        guacReceipt.addIngredient(new Ingredient("minced red onion or thinly sliced green onion", new BigDecimal(2), tableSpoonUom));
+        guacReceipt.addIngredient(new Ingredient("serrano chiles, stems and seeds removed, minced", new BigDecimal(2), eachUom));
+        guacReceipt.addIngredient(new Ingredient("Cilantro", new BigDecimal(2), tableSpoonUom));
+        guacReceipt.addIngredient(new Ingredient("freshly grated black pepper", new BigDecimal(2), dashUom));
+        guacReceipt.addIngredient(new Ingredient("ripe tomato, seeds and pulp removed, chopped", new BigDecimal(".5"), eachUom));
 
         guacReceipt.getCategories().add(americanCategory);
         guacReceipt.getCategories().add(mexicanCategory);
@@ -174,27 +173,26 @@ class ReceiptBootstrap implements ApplicationListener<ContextRefreshedEvent> {
                 "Read more: http://www.simplyReceipts.com/Receipts/spicy_grilled_chicken_tacos/#ixzz4jvu7Q0MJ");
 
         tacosReceipt.setNotes(tacoNotes);
-        tacoNotes.setReceipt(tacosReceipt);
 
-        tacosReceipt.addIngredient(new Ingredient("Ancho Chili Powder", new BigDecimal(2), tableSpoonUom, tacosReceipt));
-        tacosReceipt.addIngredient(new Ingredient("Dried Oregano", new BigDecimal(1), teapoonUom, tacosReceipt));
-        tacosReceipt.addIngredient(new Ingredient("Dried Cumin", new BigDecimal(1), teapoonUom, tacosReceipt));
-        tacosReceipt.addIngredient(new Ingredient("Sugar", new BigDecimal(1), teapoonUom, tacosReceipt));
-        tacosReceipt.addIngredient(new Ingredient("Salt", new BigDecimal(".5"), teapoonUom, tacosReceipt));
-        tacosReceipt.addIngredient(new Ingredient("Clove of Garlic, Choppedr", new BigDecimal(1), eachUom, tacosReceipt));
-        tacosReceipt.addIngredient(new Ingredient("finely grated orange zestr", new BigDecimal(1), tableSpoonUom, tacosReceipt));
-        tacosReceipt.addIngredient(new Ingredient("fresh-squeezed orange juice", new BigDecimal(3), tableSpoonUom, tacosReceipt));
-        tacosReceipt.addIngredient(new Ingredient("Olive Oil", new BigDecimal(2), tableSpoonUom, tacosReceipt));
-        tacosReceipt.addIngredient(new Ingredient("boneless chicken thighs", new BigDecimal(4), tableSpoonUom, tacosReceipt));
-        tacosReceipt.addIngredient(new Ingredient("small corn tortillasr", new BigDecimal(8), eachUom, tacosReceipt));
-        tacosReceipt.addIngredient(new Ingredient("packed baby arugula", new BigDecimal(3), cupsUom, tacosReceipt));
-        tacosReceipt.addIngredient(new Ingredient("medium ripe avocados, slic", new BigDecimal(2), eachUom, tacosReceipt));
-        tacosReceipt.addIngredient(new Ingredient("radishes, thinly sliced", new BigDecimal(4), eachUom, tacosReceipt));
-        tacosReceipt.addIngredient(new Ingredient("cherry tomatoes, halved", new BigDecimal(".5"), pintUom, tacosReceipt));
-        tacosReceipt.addIngredient(new Ingredient("red onion, thinly sliced", new BigDecimal(".25"), eachUom, tacosReceipt));
-        tacosReceipt.addIngredient(new Ingredient("Roughly chopped cilantro", new BigDecimal(4), eachUom, tacosReceipt));
-        tacosReceipt.addIngredient(new Ingredient("cup sour cream thinned with 1/4 cup milk", new BigDecimal(4), cupsUom, tacosReceipt));
-        tacosReceipt.addIngredient(new Ingredient("lime, cut into wedges", new BigDecimal(4), eachUom, tacosReceipt));
+        tacosReceipt.addIngredient(new Ingredient("Ancho Chili Powder", new BigDecimal(2), tableSpoonUom));
+        tacosReceipt.addIngredient(new Ingredient("Dried Oregano", new BigDecimal(1), teapoonUom));
+        tacosReceipt.addIngredient(new Ingredient("Dried Cumin", new BigDecimal(1), teapoonUom));
+        tacosReceipt.addIngredient(new Ingredient("Sugar", new BigDecimal(1), teapoonUom));
+        tacosReceipt.addIngredient(new Ingredient("Salt", new BigDecimal(".5"), teapoonUom));
+        tacosReceipt.addIngredient(new Ingredient("Clove of Garlic, Choppedr", new BigDecimal(1), eachUom));
+        tacosReceipt.addIngredient(new Ingredient("finely grated orange zestr", new BigDecimal(1), tableSpoonUom));
+        tacosReceipt.addIngredient(new Ingredient("fresh-squeezed orange juice", new BigDecimal(3), tableSpoonUom));
+        tacosReceipt.addIngredient(new Ingredient("Olive Oil", new BigDecimal(2), tableSpoonUom));
+        tacosReceipt.addIngredient(new Ingredient("boneless chicken thighs", new BigDecimal(4), tableSpoonUom));
+        tacosReceipt.addIngredient(new Ingredient("small corn tortillasr", new BigDecimal(8), eachUom));
+        tacosReceipt.addIngredient(new Ingredient("packed baby arugula", new BigDecimal(3), cupsUom));
+        tacosReceipt.addIngredient(new Ingredient("medium ripe avocados, slic", new BigDecimal(2), eachUom));
+        tacosReceipt.addIngredient(new Ingredient("radishes, thinly sliced", new BigDecimal(4), eachUom));
+        tacosReceipt.addIngredient(new Ingredient("cherry tomatoes, halved", new BigDecimal(".5"), pintUom));
+        tacosReceipt.addIngredient(new Ingredient("red onion, thinly sliced", new BigDecimal(".25"), eachUom));
+        tacosReceipt.addIngredient(new Ingredient("Roughly chopped cilantro", new BigDecimal(4), eachUom));
+        tacosReceipt.addIngredient(new Ingredient("cup sour cream thinned with 1/4 cup milk", new BigDecimal(4), cupsUom));
+        tacosReceipt.addIngredient(new Ingredient("lime, cut into wedges", new BigDecimal(4), eachUom));
 
         tacosReceipt.getCategories().add(americanCategory);
         tacosReceipt.getCategories().add(mexicanCategory);

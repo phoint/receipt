@@ -17,11 +17,10 @@ public class Ingredient {
     @ManyToOne
     private Receipt receipt;
 
-    public Ingredient(String descriptions, BigDecimal amount, UnitOfMeasure uom, Receipt receipt) {
+    public Ingredient(String descriptions, BigDecimal amount, UnitOfMeasure uom) {
         this.descriptions = descriptions;
         this.amount = amount;
         this.uom = uom;
-        this.receipt = receipt;
     }
 
     public Long getId() {
