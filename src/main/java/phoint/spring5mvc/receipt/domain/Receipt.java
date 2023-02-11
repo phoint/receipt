@@ -3,6 +3,7 @@ package phoint.spring5mvc.receipt.domain;
 import net.bytebuddy.dynamic.loading.InjectionClassLoader;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -16,6 +17,7 @@ public class Receipt {
     private Integer servings;
     private String source;
     private String url;
+    @Lob
     private String directions;
 
     @OneToOne(cascade = CascadeType.ALL)
@@ -24,10 +26,10 @@ public class Receipt {
     @JoinTable(name = "receipt_category",
             joinColumns = @JoinColumn(name = "receipt_id"),
             inverseJoinColumns = @JoinColumn(name = "category_id"))
-    private Set<Category> categories;
+    private Set<Category> categories = new HashSet<>();
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "receipt")
-    private Set<Ingredient> ingredients;
+    private Set<Ingredient> ingredients = new HashSet<>();
 
     @Lob
     private Byte[] image;
@@ -122,6 +124,10 @@ public class Receipt {
         this.ingredients = ingredients;
     }
 
+    public void addIngredient(Ingredient ingredient) {
+        ingredients.add(ingredient);
+    }
+
     public Difficulty getDifficulty() {
         return difficulty;
     }
@@ -136,5 +142,9 @@ public class Receipt {
 
     public void setCategories(Set<Category> categories) {
         this.categories = categories;
+    }
+
+    public void ađCategorie(Category categorie) {
+        categories.add(categorie);
     }
 }
