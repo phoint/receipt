@@ -3,6 +3,7 @@ package phoint.spring5mvc.receipt.domain;
 import net.bytebuddy.dynamic.loading.InjectionClassLoader;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Receipt {
@@ -20,6 +21,10 @@ public class Receipt {
 
     @OneToOne(cascade = CascadeType.ALL)
     private Notes notes;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "receipt")
+    private Set<Ingredient> ingredients;
+
     @Lob
     private Byte[] image;
 
